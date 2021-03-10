@@ -14,10 +14,6 @@
         
     </head>
     <body>
-        <div class="flex">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-        </div>
+        <a href="/login">Login</a>
     </body>
 </html>

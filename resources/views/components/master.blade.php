@@ -21,18 +21,14 @@
 </head>
 <body>
     <div id="app">
-        <section class="px-8 py-4 mb-6">
+        <!-- <section class="px-8 py-4 mb-6">
             <header class="container mx-auto">
                 <img src="images/logo.svg" alt="Logo">
             </header>
     
-        </section>
+        </section> -->
         
-        <section class="px-8">
-            <main class="container mx-auto">
-                @yield('content')
-            </main>
-        </section>
+        {{ $slot }}
         
     </div>
 </body>
