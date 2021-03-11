@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\Like;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -52,6 +53,7 @@ class User extends Authenticatable
         $friends = $this->follows()->pluck('id');
         return Tweet::whereIn('user_id', $friends)
             ->orWhere('user_id', $this->id)
+            ->withLikes()
             ->latest()
             ->paginate(40);
     }
@@ -95,6 +97,10 @@ class User extends Authenticatable
         return $this->follows()->where('following_user_id', $user->id)
         ->exists();
     }
+
+    public function likes() {
+         return $this->hasMany(Like::class);
+     }
 
     
 }

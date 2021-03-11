@@ -3,14 +3,18 @@
         <a href="{{ route('profile', $tweet->user) }}"><img class="rounded-full mr-2" style="width: 40px;height: 40px" src="{{ $tweet->user->avatar }}" alt="Avatar"></a>
     </div>
     <div>
-        <h5 class="text-bold my-4">
+        <h5 class="text-bold my-4  ">
             <a href="{{ route('profile', $tweet->user) }}">
                 {{ $tweet->user->name}}
             </a>
             
         </h5>
-        <p class="text-sm">
+        <p class="text-sm mb-2">
             {{ $tweet->body }}
         </p>
+
+        @auth
+            <x-like-buttons :tweet="$tweet" />
+        @endauth
     </div>
 </div>
