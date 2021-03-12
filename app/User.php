@@ -57,9 +57,10 @@ class User extends Authenticatable
             ->latest()
             ->paginate(40);
     }
-    public function setPasswordAttribute($value){
-        $this->attributes['password'] = bcrypt($value);
-    }
+    // public function setPasswordAttribute($value)
+    // {
+    //     $this->attributes['password'] = bcrypt($value);
+    // }
 
     public function tweets(){
         return $this->hasMany(Tweet::class)->latest();
