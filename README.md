@@ -1,3 +1,5 @@
+![www martuniyk space_tweets](https://user-images.githubusercontent.com/13577787/111798302-9b99f500-88d2-11eb-8d66-1743000b8539.png)
+
 # Tweety
 
 This is a project copy of the Twitter site where you can, post your own tweets, subscribe to interesting users, edit your profile and much more 
